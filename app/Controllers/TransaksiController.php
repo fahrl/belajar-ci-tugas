@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\TransactionModel
-use App\Models\TransactionDetailModel
+use App\Models\TransactionModel;
+use App\Models\TransactionDetailModel;
 
 class TransaksiController extends BaseController
 {
