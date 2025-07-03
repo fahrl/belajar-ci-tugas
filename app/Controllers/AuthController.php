@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
 use App\Models\UserModel;
+use App\Models\DiskonModel;
 
 class AuthController extends BaseController
 {
@@ -38,6 +39,12 @@ class AuthController extends BaseController
                         'role' => $dataUser['role'],
                         'isLoggedIn' => TRUE
                     ]);
+                    // 🔽 Tambahkan bagian ini untuk ambil diskon hari ini
+                    $diskonModel = new DiskonModel();
+                    $diskonHariIni = $diskonModel->where('tanggal', date('Y-m-d'))->first();
+                    if ($diskonHariIni) {
+                        session()->set('diskon_nominal', $diskonHariIni['nominal']);
+                    }
 
                     return redirect()->to(base_url('/'));
                 } else {
