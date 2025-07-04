@@ -24,7 +24,7 @@ if (session()->getFlashData('failed')) {
     Tambah Data
 </button>
 <!-- Table with stripped rows -->
-<table id="KategoriTable" class="table datatable">
+<table id="KategoriTable" class="table">
     <thead>
         <tr>
             <th scope="col">No.</th>
@@ -110,17 +110,22 @@ if (session()->getFlashData('failed')) {
 </div>
 <!-- Add Modal End -->
 
+<?= $this->section('script') ?>
+<!-- DataTables CSS & JS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#KategoriTable').DataTable({
             pageLength: 10,
             language: {
-                lengthMenu: "   _MENU_ entries per page",
-                search: "", // Menghilangkan label "Search"
-                searchPlaceholder: "Search" // Placeholder di dalam input
+                searchPlaceholder: "Cari kategori...",
+                search: ""
             }
         });
     });
 </script>
+<?= $this->endSection() ?>
 
 <?= $this->endSection() ?>

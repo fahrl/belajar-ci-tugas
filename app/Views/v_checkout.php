@@ -31,7 +31,7 @@
         <!-- Vertical Form -->
         <div class="col-12">
             <!-- Default Table -->
-            <table class="table">
+            <table id="CheckoutTable" class="table">
                 <thead>
                     <tr>
                         <th scope="col">Nama</th>
