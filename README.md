@@ -106,5 +106,6 @@ Proyek menggunakan struktur MVC CodeIgniter 4:
 # Update Repository
 
 - git pull origin main
+- git add .
 - git commit -m "tuliskan perubahan disini"
 - git push origin main
