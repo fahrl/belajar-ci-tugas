@@ -21,7 +21,7 @@
 
     <?php if (session()->has('diskon_nominal')): ?>
     <div class="w-10 text-center alert alert-success mb-0 py-1">
-        <strong>🎉 Diskon Hari Ini: Rp<?= number_format(session('diskon_nominal'), 0, ',', '.') ?></strong>
+        <strong>🎉 Diskon Hari Ini : Rp<?= number_format(session('diskon_nominal'), 0, ',', '.') ?></strong>
     </div>
     <?php endif; ?>
 
